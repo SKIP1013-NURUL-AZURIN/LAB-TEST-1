@@ -1,0 +1,53 @@
+package labTest1;
+import java.util.Scanner;
+public class LabTest1 {
+
+	public static void main(String[] args) {
+
+		int itemsNum;
+		double price1, price2, price3;
+		int qtt1, qtt2, qtt3;
+		double totalPrice;
+		double discount;
+		double paid;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the number of items : ");
+		itemsNum = sc.nextInt();
+		
+		System.out.print("Enter quantity of first item : ");
+		qtt1 = sc.nextInt();
+		System.out.print("Enter price of first item : RM");
+		price1 = sc.nextDouble();
+		
+		System.out.print("\nEnter quantity of second item : ");
+		qtt2 = sc.nextInt();
+		System.out.print("Enter price of second item : RM");
+		price2 = sc.nextDouble();
+		
+		System.out.print("\nEnter quantity of third item : ");
+		qtt3 = sc.nextInt();
+		System.out.print("Enter price of third item : RM");
+		price3 = sc.nextDouble();
+		
+		totalPrice = (qtt1*price1) + (qtt2*price2) + (qtt3*price3);
+		System.out.print("\nTotal price          : RM" + totalPrice);
+		
+		if (totalPrice >100)
+		{
+			discount = totalPrice * 0.2;
+			System.out.printf("\nDiscount received    : RM%.2f", discount);
+		}
+		else
+		{
+			discount = totalPrice * 0.1;
+			System.out.printf("\nDiscount received    : RM%.2f", discount);
+		}
+		
+		paid = totalPrice-discount;
+		System.out.printf("\nPrice to be paid     : RM%.2f", paid);
+
+	}
+
+}
