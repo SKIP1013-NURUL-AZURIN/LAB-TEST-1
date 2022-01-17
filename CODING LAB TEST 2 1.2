@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner (System.in);
+	    double radius, height, surfaceArea, baseArea, volume;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the radius of the cylinder : ");
+		radius = sc.nextDouble();
+		
+		System.out.print("Enter the height of the cylinder : ");
+		height = sc.nextDouble();
+		
+		baseArea = Math.PI * radius * radius;
+		System.out.printf("\nBase area is : %.2fcm", baseArea);
+		
+		surfaceArea = 2.0 * Math.PI * radius + 2.0 * baseArea;
+		System.out.printf("\nSurface area is : %.2fcm", surfaceArea);
+		
+		volume = baseArea * height;
+		System.out.printf("\nVolume is : %.2fcm", volume);
+	    
+		
+		
+	}
+}
